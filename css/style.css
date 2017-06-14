@@ -1,0 +1,166 @@
+@import "bootstrap.css";
+@import "flexslider.css";
+@import "font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+/*Importation d'une font ici via google font */
+
+
+/* couleur du vert du logo #c0d554*/
+
+body{
+	font-family: 'Source Sans Pro', sans-serif; /*Font utilisé dans tout le site*/
+}
+
+
+.container-fluid{
+	margin: 0px;
+	padding: 0px;
+}
+.row{
+	margin: 0;
+}
+
+.col-xs-12{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/********************************************
+					NAVBAR
+*********************************************/
+
+.test{
+	
+	width: 100%;
+	height: 10px;
+	background: url('../img/rond.png')repeat-x;
+}
+
+/*********************************************************************
+							HEADER - SLIDER
+**********************************************************************/
+
+.carousel-caption h2{ /*Titre sous le slider*/
+	font-family: 'Aladin', cursive;
+	font-size: 40px;
+	color: #c0d554;
+	text-shadow: none;
+}
+
+.carousel-caption h2 span{ /*Titre sous le slider*/
+	font-family: 'Aladin', cursive;
+	font-size: 45px;
+	color: #333;
+	text-shadow: none;
+}
+
+.carousel-caption h3{ /*Sous titre sous le slider*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: #333;
+	text-shadow: none;
+}
+
+.carousel-indicators .active{ /*Petits ronds en bas du slider*/
+	background-color: #c0d554;
+}
+
+.carousel-indicators li{
+	border: 2px solid #fff;
+}
+
+.glyphicon-chevron-left{ /*Flèche à gauche du slider */
+	color: #c0d554;
+}
+
+ .glyphicon-chevron-right{ /*Flèche à droite du slider*/
+ 	color: #c0d554;
+ }
+
+ /*********************************************************************
+				Présentation de l'épicerie et l'épicier
+**********************************************************************/
+
+header{ /*Texture beige en fond*/
+	background: url('../img/texture-epicier.jpg') no-repeat center;
+	background-size: cover;
+	margin: 0px auto;
+	padding: 0px auto; 
+	text-align: center;
+	width: 100%;
+}
+
+header img{ /*Photo de l'épicier*/
+	margin: 0px 10%;
+	text-align: center;
+	border: 10px white solid;
+	height: 250px;
+	box-shadow: 4px 4px 6px #aaa;
+	-ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+}
+
+header img:hover{ /*Effet rotation sur photo de l'épicier*/
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+.temoignage h4{ /* Texte en manuscrit style témoignage*/
+	margin: 25px 10%;
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	font-size: 32px;
+}
+
+.temoignage p{ /* Texte avec les horaires*/
+	margin: 0px 10%;
+	font-size: 18px;
+
+}
+.temoignage p span{ /* Effet gras et vert sur adresse et horaires*/
+	font-size: 18px;
+	font-weight: bold;
+	color:#c0d554;
+ 
+}
+
+
+
+/********************************************
+			CONTENU DE MA PAGE
+*********************************************/
+
+.titrecategories h4{ /* Titre de la page */
+	padding: 15px 5%;
+	font-family: 'Aladin', cursive;
+	font-size: 30px;
+	color: #c0d554;
+	text-shadow: none;
+}
+
+.categories{
+	margin: 10px 10%;
+}
+
+.promotions{ /* Bloc concernant la promo */
+	padding: 15px 5%;
+	background-color : white;
+	box-shadow: 1px 1px 6px #b8b8b8;
+}
+
+.nouveautes{ /* Bloc concernant les nouveautes */
+	padding: 15px 5%;
+	background-color : white;
+	box-shadow: 1px 1px 6px #b8b8b8;
+}
+
+
+/********************************************
+					FOOTER
+*********************************************/
