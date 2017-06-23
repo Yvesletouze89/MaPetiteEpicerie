@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="text-align: center">
 		<header>
 			<h1>Ma Petite Epicerie / <?= $this->e($title) ?></h1>
 		</header>

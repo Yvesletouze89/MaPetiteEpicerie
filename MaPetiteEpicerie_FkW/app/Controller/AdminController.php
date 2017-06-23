@@ -8,7 +8,14 @@ use Model\ProduitsModel;
 
 class AdminController extends Controller
 {
- 
+	public function accueil_admin() # Affichage du menu des Admin
+ 		{
+			$produits = new ProduitsModel();
+
+			$this->show('admin/accueil_admin');
+
+		}
+
 	public function vue_produits() # Affichage liste de tous les produits
 		{
 			$produits = new ProduitsModel();
@@ -17,15 +24,12 @@ class AdminController extends Controller
 
 		}
 
-
-	public function entree_stock() # Affichage liste des produits et menus déroulants
+	public function entree_stock() # Affichage liste des produits et menus déroulants des produits
 		{
 			$categories = new ProduitsModel();
 
 			$marques = new ProduitsModel();
 			
-			//$produits = new ProduitsModel();
-
 			$this->show('admin/entree_stock',["categories"=>$categories->categoriesList(), "marques"=>$marques->marquesList()]);
 		}
 
@@ -34,13 +38,13 @@ class AdminController extends Controller
 			if(isset($_POST['ajax']) && isset($_POST['product_cat']))
 			{
 				$select = new ProduitsModel();
-				$insert = $select->selectStock($_POST['product_cat']);
+				$insert = $select->selectStock(['categorie'=>$_POST['product_cat']]);
 				echo json_encode($insert);
 			}
 			else if(isset($_POST['ajax']) && isset($_POST['product_marque']))
 			{
 				$select = new ProduitsModel();
-				$insert = $select->selectMarque($_POST['product_marque']);
+				$insert = $select->selectStock(['marque'=>$_POST['product_marque']]);
 				echo json_encode($insert);
 			}
 			else
@@ -65,7 +69,54 @@ class AdminController extends Controller
 			$select->insertProd(['produits_ID_prod'=>$_POST['id_prod'], 'commercant_ID_util'=>'1']);
 			
 		}
-	
+
+	public function maj_stock() # Affichage liste des produits et menus déroulants du stock
+		{
+			$categories = new ProduitsModel();
+
+			$marques = new ProduitsModel();
+			
+			$this->show('admin/maj_stock',["categories"=>$categories->categoriesList(), "marques"=>$marques->marquesList()]);
+		}
+
+	public function affiche_stock() # Affichage liste des produits du stock selon sélection
+		{
+			if(isset($_POST['ajax']) && isset($_POST['product_cat2']))
+			{
+				$select = new ProduitsModel();
+				$insert = $select->selectStock2($_POST['product_cat2']);
+				echo json_encode($insert);
+			}
+			else if(isset($_POST['ajax']) && isset($_POST['product_marque2']))
+			{
+				$select = new ProduitsModel();
+				$insert = $select->selectMarque2($_POST['product_marque2']);
+				echo json_encode($insert);
+			}
+			else
+			{
+				$this->show('admin/entree_stock');
+			}
+		}
+
+	public function maj_produitStock($id) # Affichage de la page de mise à jour d'un produit dans le stock
+		{
+			if($id){
+			$produit = new ProduitsModel();
+			$result = $produit->afficheMaj($id);
+			$this->show('admin/maj_produitStock',["produit"=>$result]);
+			}
+			else
+			{
+				$this->show('admin/maj_Stock');
+			}
+		}
+
+	public function enregistreMaj() # Update les maj des produits
+		{
+				//$['stock']=$_POST('#stock.val() '); #A vérifier
+				$this->show('admin/enregistreMaj');
+		}
 
 	
 }

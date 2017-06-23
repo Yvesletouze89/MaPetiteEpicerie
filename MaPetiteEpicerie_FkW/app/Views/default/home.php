@@ -3,7 +3,8 @@
 <?php $this->start('main_content') ?>
 	<h2>Sélectionner une page</h2>
 	<h1></h1>
-	<a href="entree_stock">Entrer des nouveaux produits dans le stock</a>
+	<a href="accueil_admin" class="btn btn-danger" role="button" style="width: 450px; background-color: green">Pages réservées aux administrateur</a>
 	<h1></h1>
-	<a href="vue_produits">Voir tous les produits de la base</a>
+	
+
 <?php $this->stop('main_content') ?>

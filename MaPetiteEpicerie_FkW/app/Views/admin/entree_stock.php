@@ -50,7 +50,8 @@
 
 	<h1></h1>
 
-	<a href="/MaPetiteEpicerie_FkW/public">Retour à page accueil</a>
+	
+	<a href="accueil_admin" class="btn btn-danger" role="button" style="width: 450px; background-color: green">Retour à l'accueil Admin</a>
 
 
 <?php $this->stop('main_content') ?>

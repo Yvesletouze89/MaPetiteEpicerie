@@ -44,18 +44,11 @@ class ProduitsModel extends \W\Model\Model
 			return $result;
 		}
 
-	public function selectStock($cat) # Affichage des produits pour une catégorie
+	public function selectStock($tableau) # Affichage des produits pour une catégorie
 		{
 			$this->setPrimaryKey("ID_prod");
 			$this->setTable("produits");
-			return $this->search(['categorie'=>$cat]);
-		}
-
-	public function selectMarque($mark) # Affichage des produits pour une marque
-		{
-			$this->setPrimaryKey("ID_prod");
-			$this->setTable("produits");
-			return $this->search(['marque'=>$mark]);
+			return $this->search($tableau);
 		}
 
 	public function verifStock($verif) # Vérifie que le produit n'est pas en stock
@@ -72,8 +65,69 @@ class ProduitsModel extends \W\Model\Model
 			$this->setTable("stock_produits");
 			$this->insert($insert);
 		}
-			
 
+	public function selectStock2($cat) # Affichage des produits du stock pour une catégorie
+		{
+			$app = getApp();
+			
+			try {
+			    //connexion à la base avec la classe PDO et le DSN
+			    $dbh = new PDO('mysql:host='.$app->getConfig('db_host').';dbname='.$app->getConfig('db_name'), $app->getConfig('db_user'), $app->getConfig('db_pass'), array(
+			        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', //on s'assure de communiquer en utf8
+			        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //on récupère nos données en array associatif par défaut
+			        PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING         //on affiche les erreurs. À modifier en prod. 
+			    ));
+			} catch (PDOException $e) { //attrappe les éventuelles erreurs de connexion
+			    echo 'Erreur de connexion : ' . $e->getMessage();
+			}
+			$query = $dbh->prepare('SELECT * FROM `stock_produits` INNER JOIN produits ON stock_produits.produits_ID_prod = produits.ID_prod WHERE `categorie`="'.$cat.'"');
+			$query->execute();
+			$result = $query->fetchAll(); 
+			return $result;
+
+			}
+
+	public function selectMarque2($mark) # Affichage des produits du stock pour une marque
+		{
+			$app = getApp();
+			
+			try {
+			    //connexion à la base avec la classe PDO et le DSN
+			    $dbh = new PDO('mysql:host='.$app->getConfig('db_host').';dbname='.$app->getConfig('db_name'), $app->getConfig('db_user'), $app->getConfig('db_pass'), array(
+			        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', //on s'assure de communiquer en utf8
+			        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //on récupère nos données en array associatif par défaut
+			        PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING         //on affiche les erreurs. À modifier en prod. 
+			    ));
+			} catch (PDOException $e) { //attrappe les éventuelles erreurs de connexion
+			    echo 'Erreur de connexion : ' . $e->getMessage();
+			}
+			$query = $dbh->prepare('SELECT * FROM `stock_produits` INNER JOIN produits ON stock_produits.produits_ID_prod = produits.ID_prod WHERE `marque`="'.$mark.'"');
+			$query->execute();
+			$result = $query->fetchAll(); 
+			return $result;
+
+			}
+
+	public function afficheMaj($id) # Affichage du produit du stock pour modification
+		{
+			$app = getApp();
+			
+			try {
+			    //connexion à la base avec la classe PDO et le DSN
+			    $dbh = new PDO('mysql:host='.$app->getConfig('db_host').';dbname='.$app->getConfig('db_name'), $app->getConfig('db_user'), $app->getConfig('db_pass'), array(
+			        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', //on s'assure de communiquer en utf8
+			        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //on récupère nos données en array associatif par défaut
+			        PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING         //on affiche les erreurs. À modifier en prod. 
+			    ));
+			} catch (PDOException $e) { //attrappe les éventuelles erreurs de connexion
+			    echo 'Erreur de connexion : ' . $e->getMessage();
+			}
+			$query = $dbh->prepare('SELECT * FROM `stock_produits` INNER JOIN produits ON stock_produits.produits_ID_prod = produits.ID_prod WHERE `produits_ID_prod`="'.$id.'"');
+			$query->execute();
+			$result = $query->fetch(); 
+			return $result;
+
+			}
 
 
 
