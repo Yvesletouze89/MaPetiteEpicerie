@@ -1,0 +1,166 @@
+@import "bootstrap.css";
+@import "font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+/*Importation d'une font ici via google font */
+
+
+/* couleur du vert du logo #c0d554*/
+
+body{
+	font-family: 'Source Sans Pro', sans-serif; /*Font utilisé dans tout le site*/
+}
+
+
+/********************************************
+				CONNEXION / INSCRIPTION 
+*********************************************/
+
+.connexion div{ /* Marges autour du formulaire de connexion*/
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.inscription div{ /* Marges autour du formulaire d'inscription*/
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.titrecategories{ /* Titre de la page */
+	padding-top:15px;
+	font-family: 'Aladin', cursive;
+	font-size: 33px;
+	color: #c0d554;
+}
+
+.faContact{ /* couleur des icones */
+	color:#c0d554;
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+.obligations{
+	color:#f83232;
+}
+
+ span{ /* couleur des * des champs obligatoires */
+ 	color:#f83232;
+ 	font-size: 20px;
+ }
+
+ a{ /* couleur des liens*/
+ 	color:#c0d554;
+ }
+
+ a:hover{ /* couleur des liens au survol */
+ 	color:#a7ba42;
+ }
+
+
+ .form-control{ /* couleur de l'input */
+ 	border:1px dashed #c0d554;
+ }
+
+.form-control:focus{ /* effet si on clique sur l'input */
+	border-color: #c0d554;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 243, 123, .6);
+}
+
+ .form-control-warning{ /* Effet sur l'input si case non remplie */
+ 	border:1px dashed #f83232 !important;
+ 	border-radius: 4px;
+ 	width: 100%;
+ 	padding: 6px 12px;
+
+ }
+
+.divAjout{  /*Div qui s'ajoute si la case n'est pas remplie. Ex:"merci de remplir..." */
+ 	height: 20px;
+	color:#f83232;
+ } 
+
+ #identifiantZero{  /*Effet si la case identifiant n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mdpZero{  /*Effet si la case mdp n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+ 
+#nomZero{  /*Effet si la case nom n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#prenomZero{  /*Effet si la case prenom n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mailZero{  /*Effet si la case mail 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mail2Zero{  /*Effet si la case mail 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#passwordZero{ /*Effet si la case password 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#password2Zero{  /*Effet si la case password 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#adresseZero{ /*Effet si la case adresse n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#cpZero{ /*Effet si la case code postal n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#villeZero{ /*Effet si la case ville n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mobileZero{ /*Effet si la case mobile n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+
+}
+
+#formOk{ /*Div qui s'affiche à la validation du formulaire*/
+	color:#c0d554;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+.btn-primary{ /*Couleur bouton de validation*/
+	font-weight: bold;
+ 	background-color:#c0d554; 
+ 	border: none;
+ 	margin-bottom: 10px;
+ 	margin-right: 5%;
+ }
+
+.btn-primary:hover{ /*Survol du bouton de validation*/
+	font-weight: bold;
+ 	background-color:#a7ba42; 
+ 	border: none;
+ 	margin-bottom: 10px;
+ 	margin-right: 5%;
+ }
+
