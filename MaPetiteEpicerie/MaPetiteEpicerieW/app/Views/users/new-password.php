@@ -1,4 +1,4 @@
- <?php $this->layout('layout', ['title' => 'connexion']) ?>
+ <?php $this->layout('layout', ['title' => 'nouveau mot de passe']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -7,18 +7,23 @@
 <div class="container">
 <div class="jumbotron">
 
-	<form method="POST" action="connexion">
+	<form method="POST" action="new-password">
 		<!--<form method="POST" action="#">-->
 
-
 		<div class="form-group">
-			<label>Email :
+			<label>email
 				<input  class="form-control" type="text" name="email" id="email" />
 			</label>
 		</div>
+
 		<div class="form-group">
-			<label>Mot de passe :
-				<input class="form-control" type="password" name="password" id="password" />
+			<label>Nouveau mot de passe :
+				<input  class="form-control" type="password" name="password" id="password" />
+			</label>
+		</div>
+		<div class="form-group">
+			<label>confirmer nouveau mot de passe :
+				<input class="form-control" type="password" name="password2" id="password2" />
 			</label>
 		</div>
 
@@ -27,8 +32,8 @@
 		</div>
 	</form>
 
-	<h2><?= $message; ?></h2>
 
+<h2><?= $message ?></h2>
 <a href="oublie">Mot de passe oublié ?</a>
 <a href="/MaPetiteEpicerieW/public">Retour page d'accueil</a>
 

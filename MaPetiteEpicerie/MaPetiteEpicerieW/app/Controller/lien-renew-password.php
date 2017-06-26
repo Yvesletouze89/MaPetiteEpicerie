@@ -1,0 +1,1 @@
+echo "<a href='http://192.168.1.50/MaPetiteEpicerieW/public/recup-password/".$utilisateur[0]['token']."'>Renouveler le mdp</a>";

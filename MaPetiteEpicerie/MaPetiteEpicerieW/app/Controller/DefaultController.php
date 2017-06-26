@@ -14,9 +14,9 @@ class DefaultController extends Controller
 	/**
 	 * Page d'accueil par défaut
 	 */
-	public function home()
+	public function accueil()
 	{
-		$this->show('default/home');
+		$this->show('default/accueil');
 	}
 
 	/**

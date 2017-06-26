@@ -1,4 +1,4 @@
- <?php $this->layout('layout', ['title' => 'connexion']) ?>
+ <?php $this->layout('layout', ['title' => 'inscription']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -77,7 +77,7 @@
 
 <h2><?= $message ?></h2>
 
-<a href="accueil">Retour page d'accueil</a>
+<a href="/MaPetiteEpicerieW/public">Retour page d'accueil</a>
 
 
 </div>	

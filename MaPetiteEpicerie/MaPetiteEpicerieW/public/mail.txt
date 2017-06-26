@@ -1,0 +1,10 @@
+Objet: Mot de passe oublié ou perdu	
+					bonjour Nom, prenom
+					cliquez sur le lien pour créer un nouveau mot de passe:
+					
+					<a href='http://192.168.1.50/MaPetiteEpicerieW/public/recup-password/006d9c0ca10e39bd46d86da8eeb32b95'>Renouveler le mdp</a>
+
+
+
+					Remarque :  pour des raisons de confidentialité Ma petite épicerie n’est pas habilité à vous communiquer ou à vous demander votre mot de passe.
+					
