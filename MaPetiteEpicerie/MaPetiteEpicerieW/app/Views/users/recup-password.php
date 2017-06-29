@@ -5,19 +5,8 @@
 	<?php //var_dump($utilisateur); ?>
 
 <h2>resaissir votre nouveau mot de passe</h2>
-<?php
-//echo $utilisateur[0]['token'];
-
-//echo "<a href='http://192.168.1.50/MaPetiteEpicerieW/public/recup-password/".$utilisateur[0]['token']."'>Renouveler le mdp</a>";
-
-
-/*echo "<a href='http://192.168.1.50/MaPetiteEpicerieW/public/recup-password/".$utilisateur[0]['token']."'>Renouveler le mdp</a>";*/
-?>
 
 <form method="POST" action="../password-msg">
-
-
-<!-- <input  class='form-control' type='text'  name='token' id='token' value="" /> -->
 
 <input  class='form-control' type='hidden' name='email' id='email' value="<?= $utilisateur[0]['email'] ?>" />
 

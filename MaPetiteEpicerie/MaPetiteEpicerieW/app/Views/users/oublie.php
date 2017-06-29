@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'oublie']) ?>
 
 <?php $this->start('main_content') ?>
-	<h2>Mote de passe oublié</h2>
+	<h2>Mot de passe oublié</h2>
 
 	<form method="POST" action="oublie">
 	<!--<form method="POST" action="#">-->

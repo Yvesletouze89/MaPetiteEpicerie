@@ -33,11 +33,6 @@
 <a href="/MaPetiteEpicerieW/public">Retour page d'accueil</a>
 
 
-
-<!-- 		<a href="accueil.php">Retour vers la page d'accueil ?</a>
-		<br />
-		<a href="oubli.php">Mot de passe oublié ?</a> -->
-
 </div>	
 </div>
 

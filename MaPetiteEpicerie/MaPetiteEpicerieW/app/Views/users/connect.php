@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'page de connexion']) ?>
+<?php $this->layout('layout', ['title' => 'Vous êtes connecté']) ?>
 
 <?php $this->start('main_content') ?>
 <h2>Bonjour ! <?= $prenom.", ".$nom ?></h2>
@@ -8,6 +8,6 @@
 
 <a href="deconnexion">se deconnecter</a>
 
-<a href="new-password">changer son mot de passe</a>
+<a href="auth-modification-perso">changer mes infos perso</a>
 
 <?php $this->stop('main_content') ?>

@@ -1,18 +1,17 @@
  <?php $this->layout('layout', ['title' => 'nouveau mot de passe']) ?>
 
 <?php $this->start('main_content') ?>
-
+<?php $email = $_SESSION['user']['email']; ?>
 <!--ici le formulaire de connexion du site -->
 <h2>connexion</h2>
 <div class="container">
 <div class="jumbotron">
 
 	<form method="POST" action="new-password">
-		<!--<form method="POST" action="#">-->
-
+	
 		<div class="form-group">
 			<label>email
-				<input  class="form-control" type="text" name="email" id="email" />
+				<input  class="form-control" type="text" name="email" id="email" value="<?= $email ?>" />
 			</label>
 		</div>
 
@@ -28,7 +27,7 @@
 		</div>
 
 		<div class="form-group">
-			<input class="btn btn-default" type="submit" value="connexion" />
+			<input class="btn btn-default" type="submit" value="envoyer" />
 		</div>
 	</form>
 

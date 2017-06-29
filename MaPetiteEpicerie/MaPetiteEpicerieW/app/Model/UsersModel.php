@@ -20,7 +20,7 @@ class UsersModel extends \W\Model\UsersModel
 	}
 
 
-	// Fonction ajouter utilisateur db
+	// Fonction inscrire utilisateur db
 	public function addUser($array)
 	{		
 		// On donne le nom de la cle primaire
@@ -29,11 +29,12 @@ class UsersModel extends \W\Model\UsersModel
 		// On donne le nom de la table
 		$this->setTable('utilisateurs');
 
-		// Insert les donnees dans BD
+		// Insert les donnees dans la table utilisateur
 		$this->insert($array); 
 
 	}
 	
+
 	// Fonction qui genere un token pour un user qui oublie son mdp 
 	public function insertToken($token, $id)
 	{		
@@ -50,6 +51,7 @@ class UsersModel extends \W\Model\UsersModel
 		// on fait un array associatf ['token' => $token] car il va ajouter dans la colonne token, le token generer dans le UsersController.. oubliPassword()
 	}
 
+	//Met a jour le mot de passe en base de donné et supprime le token 
 	public function renewPassword($arrayPassToken, $id)
 	{		
 		// On donne le nom de la cle primaire
@@ -63,11 +65,10 @@ class UsersModel extends \W\Model\UsersModel
 
 	}
 
-
+	//Recupere le token dans le champ token de table utilisateur
 	public function getUserByToken($token)
 	{		
 		//Faire une requete sql en dure car search fait un LIKE 
-
 
 		$app = getApp();
 
@@ -87,6 +88,33 @@ class UsersModel extends \W\Model\UsersModel
 		$query->execute();
 		$result = $query->fetchAll();
 		return $result; 
+
+	}
+
+	// SELECT * FROM utilisateurs WHERE ID_util = ? 
+	public function selectId($id)
+	{		
+		// On donne le nom de la cle primaire
+		$this->setPrimaryKey('ID_util');
+
+		// On donne le nom de la table
+		$this->setTable('utilisateurs');
+
+		return $this->find($id);
+	}
+
+
+	// Fonction ajouter utilisateur db
+	public function updateInfoUser($array, $id)
+	{		
+		// On donne le nom de la cle primaire
+		$this->setPrimaryKey('ID_util');
+
+		// On donne le nom de la table
+		$this->setTable('utilisateurs');
+
+		// Insert les donnees dans la table utilisateur
+		$this->update($array, $id); 
 
 	}
 
