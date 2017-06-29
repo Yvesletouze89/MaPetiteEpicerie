@@ -1,0 +1,7 @@
+premier fichier appeler index.php demmarre le framework
+config.php et qui charge route.php 
+
+est ce que la route existe puis appel le controller
+
+puis controller pour gerer les fonctions pour gerer les vues et les pages
+ 
