@@ -1,10 +1,11 @@
 @import "bootstrap.css";
 @import "font-awesome.css";
 @import url('https://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+/*Importation d'une font ici via google font */
 
-body{
-
-}
+/****************************************************************************MENU NAVIGATION*********************************************************************/
 
 /* .navbar-toggle contrôle css font Awesome (pictos header)*/
 .navbar-toggle{
@@ -18,17 +19,6 @@ body{
 	width:40px;
 }
 
-/* .right et .left contrôlent position des pictos sur version mobile*/
-.right{
-	position:relative;
-	float:right;
-	text-align: center;
-}
-.left{
-	position:relative;
-	float:left;
-	margin-left:3px;
-}
 
 .navbar-toggle:hover{
 	background-color:#889d12 !important;
@@ -54,18 +44,42 @@ body{
 .navbar-header{
 	width : 100%;
 }
-
+.userButton{
+	position: absolute;
+	right: 5px;
+	text-align: center;
+}
+.basketButton{
+	position: absolute;
+	right: 50px;
+	text-align: center;
+}
+.left{
+	position: absolute;
+	left: 5px;
+	overflow: hidden;
+}
 .navbar-brand{
 	font-family: 'Aladin', cursive;
 	font-size:24px !important;
 	color:white !important;
 	margin : auto !important;
 	text-align : center;
+	position: absolute;
+	left: 70px;
+	right: 100px;
+	overflow: hidden;
 }
 .navbar-nav{
 	vertical-align: middle !important;
-	text-align : center !important;
+	text-align : left !important;
 	margin : auto !important;
+	width: 100%;
+	position: absolute;
+	top : 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+
 }
 
 .navbar-nav a{
@@ -79,21 +93,207 @@ body{
 	color : #889d12 !important;
 }
 
-@media screen and (min-width: 768px){
+.decoration{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: url(../img/rond.png)repeat-x;
+    top: 0;
+    z-index: 1;
+}
+
+
+/************************************************************************************** css nath***************************************************************************************/
+
+/* couleur du vert du logo #c0d554*/
+
+body{
+	font-family: 'Source Sans Pro', sans-serif; /*Font utilisé dans tout le site*/
+}
+
+
 .container-fluid{
-	padding-left:0;
-	padding-right:0;
+	padding: 0px;
 }
-.navbar-brand{
+
+
+/*********************************************************************
+							HEADER - SLIDER
+**********************************************************************/
+
+.slider{ /* suppression des margin et padding du slider */
+	
+	margin: 0;
+	padding: 0;
+}
+
+.slider2{ /* suppression des margin et padding du slider */
+	margin-top :100px;
+	/*margin: 0;*/
+	padding: 0;
+}
+
+.carousel-caption h2{ /*Titre sous le slider*/
 	font-family: 'Aladin', cursive;
-	font-size:48px !important;
-	padding-right : 30%;
-	padding-left : 30%;
-	text-align : center;
-
+	font-size: 40px;
+	color: #c0d554;
+	text-shadow: none;
 }
 
+.carousel-caption h2 span{ /*Titre sous le slider*/
+	font-family: 'Aladin', cursive;
+	font-size: 45px;
+	color: #333;
+	text-shadow: none;
 }
+
+.carousel-caption h3{ /*Sous titre sous le slider*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: #333;
+	text-shadow: none;
+}
+
+.carousel-indicators .active{ /*Petits ronds en bas du slider*/
+	background-color: #c0d554;
+}
+
+.carousel-indicators li{
+	border: 2px solid #fff;
+}
+
+.glyphicon-chevron-left{ /*Flèche à gauche du slider */
+	color: #c0d554;
+}
+
+ .glyphicon-chevron-right{ /*Flèche à droite du slider*/
+ 	color: #c0d554;
+ }
+
+ /*********************************************************************
+				Présentation de l'épicerie et l'épicier
+**********************************************************************/
+
+.header{  /* suppression des margin et padding du fond texture beige */
+	margin: 0;
+	padding: 0;
+}
+
+header{ /*Texture beige en fond*/
+	background: url('../img/texture-epicier.jpg') no-repeat center;
+	background-size: cover;
+	margin: 0;
+	padding: 0 0 5px 0; 
+	text-align: center;
+	width: 100%;
+}
+
+header img{ /*Photo de l'épicier*/
+	margin: 0px;
+	text-align: center;
+	border: 10px white solid;
+	height: 250px;
+	box-shadow: 4px 4px 6px #aaa;
+	-ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+}
+
+header img:hover{ /*Effet rotation sur photo de l'épicier*/
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+.temoignage{
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+
+.temoignage h4 p{ /* Texte en manuscrit style témoignage*/
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	font-size: 28px;
+}
+
+.temoignage p{ /* Texte avec les horaires*/
+	font-size: 18px;
+	margin: 0;
+
+}
+.temoignage p span{ /* Effet gras et vert sur adresse et horaires*/
+	font-size: 18px;
+	font-weight: bold;
+	color:#c0d554;
+}
+
+
+/********************************************
+			CONTENU DE MA PAGE
+*********************************************/
+
+.search{
+	margin-bottom:20px !important;
+}
+
+.search p{/* Barre de recherche*/
+	margin-bottom:1px;
+	font-size: 17px;
+	font-weight: bold;
+	color:#c0d554;
+}
+
+.btn-default{ /* couleur du bouton */
+	background-color:#c0d554;
+	color: white;
+	font-weight: bold;
+}
+
+
+.box{ /* bloc promo ou nouveauté*/
+	text-align: center;
+	margin-left: 1%;
+	margin-right: 1%;
+	box-shadow: 1px 1px 6px #b8b8b8;
+}
+
+.box img{
+	height: 200px;
+}
+
+.box p{
+	text-align: center;
+	font-family: 'Aladin', cursive;
+	font-size: 25px;
+	color:white;
+}
+.box figcaption{
+	background-color:#c0d554;
+	font-family: 'Aladin', cursive;
+	font-size: 25px;
+	color:white;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+.promotions{
+	background-color: #ffa200;
+}
+
+.nouveautes{
+	background-color: #f83232;
+}
+
+
+/**************************************************************************************fin css nath***************************************************************************************/
+
+
+
+/****************************************************************************CHEVRON*********************************************************************/
+
 .round{
 	background-color:#889d12;
 	border-radius: 50%;
@@ -109,6 +309,7 @@ body{
 	position:fixed;
 	bottom:50px;
 	right:0;
+	margin-right:3px;
 }
 .fa-angle-double-up{
 	font-size: 24px;
@@ -121,7 +322,7 @@ body{
 .fa-angle-double-up:hover{
 	background-color:white;
 }
-
+/****************************************************************************FOOTER*********************************************************************/
 footer{
 	position:fixed;
 	bottom:0;
@@ -132,17 +333,441 @@ footer{
 	text-align: center;
 }
 
+footer p{
+	color:white;
+	font-size: 1em;
+}
+
 footer a{
 	color:white;
-	font-size: 0.8em;
 }
 
 footer a:hover{
 	color:white;
 	text-decoration: underline;
-	font-size: 1em;
+	font-size: 1,2em;
 }
 
 footer .fa{
 	color:white;
+}
+
+
+/****************************************************************************PRODUIT*********************************************************************/
+
+/*fiche produit*/
+.container-fluid{
+		margin : 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+.rowContainer{
+	/*position : relative !important;*/
+	margin-left : 1%;
+}
+
+.contour{
+	margin-top:50px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:1px;
+}
+
+.infoProduit{
+	overflow: hidden;
+}
+
+.promo{
+	overflow: hidden;
+	background-color: red;
+	color:white;
+	font-size:18px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+  	border-radius: 4px;
+	padding:2%;
+}
+
+.prix{
+	overflow: hidden;
+	color:red;
+	font-size:18px;
+}
+
+.libelle{
+	overflow: hidden;
+	font-weight: bold;
+}
+
+/*Bouton Ajouter*/
+.ajout{
+	color : #889d12;
+	font-weight: bold;
+	text-align: center;
+}
+/*.ajout:hover{
+	border-style: solid;
+	border-width: 2px;
+	background-color:white;
+	border-color : #889d12;
+	color : #889d12;
+	font-weight: bold;
+}
+*/
+
+/*image produit*/
+.infoProduit{
+	padding:0;
+}
+.vignette{
+	width : 120px;
+	height : 120px;
+	overflow: hidden;
+}
+
+.btn-success{
+	border-color : #889d12;
+}
+
+/*BOUTON INCREMENTATION*/
+
+.input-group{
+	overflow: hidden;
+}
+
+#moins{
+	background-color: #889d12;
+}
+
+#plus{
+	background-color: red;
+}
+
+/****************************************************************************CATEGORIE*********************************************************************/
+
+.page-header{
+	background-color : #c0d554;	
+	text-align: center;
+	color : white;
+	padding:20px;
+}
+small{
+	color : white !important;
+}
+
+h1,h2{
+	font-family: 'Aladin', cursive;
+}
+
+.categorie{
+	overflow: hidden;
+	padding-right:10px;
+/**/
+}
+
+.categorie a{
+	padding-right:10px;
+	color : #c0d554;
+}
+
+.categorie a:hover{
+	color :#889d12;
+}
+
+
+/*.platsJour{
+	background-color: red;
+	color:white;
+	font-size:18px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+  	border-radius: 4px;
+	padding:2%;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+	
+}
+
+.boissons{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.fruitLegume{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.surgeles{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.EpSalee{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.EpSucree{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.hygiene{
+	border-style: solid;
+	border-width: 1px;
+	border-color : #7f8c8d;
+	padding-left:20px;
+	margin:1%;
+}
+
+.entretien{
+	border-radius: 4px;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:20px;
+	margin:1%;
+}
+*/
+
+/*.cat{
+	border-style: solid;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:20px;
+	margin:1%;
+}*/
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+
+	.rowContainer{
+	/*position : relative !important;*/
+		margin : 0 !important;
+}
+
+	.container-fluid{
+		margin : 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.navbar-brand{
+		font-family: 'Aladin', cursive;
+		font-size:42px !important;
+		/* padding-right : 30%;
+		padding-left : 30%;
+		text-align : center; */
+		width: 100%;
+	}
+
+}
+
+
+/**********************************************************************************PANIER**********************************************************************************/
+table{
+	width:100%;
+	border-style: solid;
+	border-radius-right: 4px;
+	border-radius-left: 4px;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:20px;
+
+}
+
+th{
+	padding:20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	background-color: #889d12;
+	color:white;
+	font-size: 1em;
+	text-align:center;
+}
+
+td{
+	padding:20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	font-size: 1.5em;
+	color:#7f8c8d;	
+}
+
+.recap{
+	margin-top:2%;
+	margin-bottom:2%;
+	padding:10px;
+	border-style: solid;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color : #7f8c8d;	
+	background-color: #7f8c8d;	
+	color:white;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.imgRecap{
+	margin:auto;
+	width: 50px;
+	height: 50px;
+}
+
+.fa-trash{
+	margin:auto;
+	color:#889d12;
+	padding:10%;
+	font-size: 1em;
+}
+
+.title{
+	color: #c0d554;	
+}
+form{
+	margin-top:2%;
+	margin-bottom:2%;
+}
+
+.lien{
+	padding: 10px 20px;
+	margin-top:2%;
+	margin-bottom:2%;
+	color: #c0d554;	
+	text-align: right;
+}
+.lien a{
+	padding: 10px 20px;
+	margin-top:2%;
+	margin-bottom:2%;
+	color: #c0d554;
+}
+.lien a:hover{
+	color: #889d12;	
+	text-decoration: underline;
+}
+#validPanier{ /*Couleur bouton de validation*/
+	font-size: 1.8em;
+	float: right;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color: #ffa200 !important;	
+	margin-top:2%;
+	margin-bottom:50px;
+}
+
+#validPanier:hover{ /*Survol du bouton de validation*/
+	font-weight: bold;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color:white!important;	
+	color:#ffa200;
+ }
+.fa-truck,.fa-car,.fa-credit-card,.fa-cc-paypal{
+	font-size: 2em;
+	color: #889d12;;
+	margin :2%;
+}
+.lastLine{
+	margin-bottom:2%;
+}
+
+.textRight{
+	text-align:right;
+}
+
+.textCenter{
+	text-align:center;
+}
+
+/**********************************************************************************Accueil**********************************************************************************/
+.carte{
+	width:400px;
+	margin:auto;
+}
+.search2{
+	padding-bottom: 20px !important;
+	margin-bottom:20px !important;
+}
+
+
+/**********************************************************************************CONTACT**********************************************************************************/
+
+.champContact {
+	border-radius: 4px;
+	border-style: solid;
+	border-color: #889d12;
+	margin-bottom:25px;
+	padding: 10px;
+	font-size: 20px;
+	height: 40px;
+}
+.champTextarea{
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #889d12;
+	margin-bottom:20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 20px;
+	height: 170px;
+}
+
+.champSelect{
+	width : 100%;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #889d12;
+	margin-bottom:20px;
+	padding-top: 10px;
+	font-size: 20px;
+	height: 40px;
+}
+
+.endForm{
+	color:#889d12;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.paragraphe{
+	font-size: 16px;
+}
+
+.imgEpicier{
+	border: 10px white solid;
+	height: 250px;
+	box-shadow: 4px 4px 6px #aaa;
+}
+
+address{
+	font-size: 16px;
 }
