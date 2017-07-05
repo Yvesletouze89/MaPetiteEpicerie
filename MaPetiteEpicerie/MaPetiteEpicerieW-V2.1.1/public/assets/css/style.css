@@ -1,0 +1,1332 @@
+
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+@import "font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+/*Importation d'une font ici via google font */
+
+
+body{
+	font-family:'Source Sans Pro', sans-serif;
+}
+
+.container-fluid{
+	padding-bottom: 50px;
+}
+
+
+/******************accueil - carte google - sandrine */
+
+.carte{
+	width:400px;
+	margin:auto;
+}
+
+/*.search2{
+	padding-bottom: 20px !important;
+	margin-bottom: 20px !important;
+}*/
+
+/****************************************************************************MENU NAVIGATION*********************************************************************/
+
+/* .navbar-toggle contrôle css font Awesome (pictos header)*/
+.navbar-toggle{
+	padding-top:5px;
+	padding-bottom:4px;
+	padding-right:3px;
+	padding:8px 8px;
+	background-color  : white !important;
+	border-color: #889d12 !important;
+	color : #889d12 !important;
+	width:40px;
+}
+
+
+.navbar-toggle:hover{
+	background-color:#889d12 !important;
+	border-color: white !important;
+	color :white !important;
+}
+
+
+/* mise en forme header*/
+.navbar{
+	background-color : #889d12;
+	border:none;
+}
+
+/* .nav contrôle le menu de navigation*/
+.nav{
+	width : 100%;
+	background-color : white !important;
+	padding-right : 10%;
+	padding-left : 10%;
+}
+/*.navbar-header permet au logo et picto de se positionner sur une lign et passer le menu de navigation à la ligne*/
+.navbar-header{
+	width : 100%;
+}
+
+.userButton{
+	position: absolute;
+	right: 50px;
+	text-align: center;	
+}
+
+.deconnectButton{
+	position: absolute;
+	right: 50px;
+	text-align: center;	
+}
+
+.InscriButton{
+	position: absolute;
+	right: 5px;
+	text-align: center;
+}
+
+.accountButton{
+	position: absolute;
+	right: 5px;
+	text-align: center;
+}
+
+
+.basketButton{
+	position: absolute;
+	right: 95px;
+	text-align: center;
+}
+
+
+/* place le nom de l'utilisateur dans la navbar */
+.username{
+	position: absolute;
+	top: 150px;
+	right: 25px;
+	text-transform: uppercase;
+	color:#889d12;
+	font-weight: bold;
+
+}
+
+.left{
+	position: absolute;
+	left: 5px;
+	overflow: hidden;
+}
+.navbar-brand{
+	font-family: 'Aladin', cursive;
+	font-size:24px !important;
+	color:white !important;
+/*	margin : auto !important;*/
+	text-align : center;
+	position: absolute;
+	left: 70px;
+	right: 100px;
+	overflow: hidden;
+}
+.navbar-nav{
+	vertical-align: middle !important;
+	text-align : left !important;
+/*	margin : auto !important;*/
+	width: 100%;
+	position: absolute;
+	top : 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+
+}
+
+.navbar-nav a{
+	background-color : white !important;
+	color : black !important;
+	font-size : 16px;
+	font-weight: bold;
+}
+
+.navbar-nav a:hover{
+	color : #889d12 !important;
+}
+
+.decoration{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: url(../img/rond.png)repeat-x;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+
+/********************************************/
+		/*PARTIE NAVBAR MODIF RESPONSIVE (sandrine)*/
+
+
+@media screen and (min-width: 768px){
+
+	.rowContainer{
+	/*position : relative !important;*/
+		padding: 0 !important;
+	}
+
+/*	.container-fluid{
+		padding: 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}*/
+	.navbar-brand{
+		font-family: 'Aladin', cursive;
+		font-size:42px !important;
+		padding-right : 20%;
+
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 390px){
+
+
+	.navbar-brand{
+		font-family: 'Aladin', cursive;
+		font-size:15px !important;
+		/*width: 100%;*/
+		margin-left: 50px; 
+		margin-right: 25px; 
+		left: 0 !important;
+	}
+
+}
+
+
+/*********************************************************************
+							HEADER - SLIDER (nathalie)
+**********************************************************************/
+
+.slider{ /* suppression des margin et padding du slider */
+	margin: 0;
+	padding: 0;
+}
+
+.slider2{ /* suppression des margin et padding du slider */
+	margin: 0;
+	padding: 0;
+}
+
+.carousel-caption h2{ /*Titre sous le slider*/
+	font-family: 'Aladin', cursive;
+	font-size: 40px;
+	color: #c0d554;
+	text-shadow: none;
+}
+
+.carousel-caption h2 span{ /*Titre sous le slider*/
+	font-family: 'Aladin', cursive;
+	font-size: 45px;
+	color: #333;
+	text-shadow: none;
+}
+
+.carousel-caption h3{ /*Sous titre sous le slider*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	/*color: #333;*/
+	text-shadow: none;
+}
+
+.carousel-indicators .active{ /*Petits ronds en bas du slider*/
+	background-color: #c0d554;
+}
+
+.carousel-indicators li{
+	border: 2px solid #fff;
+}
+
+.glyphicon-chevron-left{ /*Flèche à gauche du slider */
+	color: #c0d554;
+}
+
+ .glyphicon-chevron-right{ /*Flèche à droite du slider*/
+ 	color: #c0d554;
+ }
+
+ .cRetour {
+/*  border-radius: 260px;*/
+  padding:15px;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  
+
+/*  background:rgba(136, 157, 18, 0.7);*/
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  position: fixed;
+  cursor: pointer;
+  bottom: 100px;
+  right: 20px;
+  display: none;
+}
+/*.cRetour:before{ content: " \25b2";  color: white;}*/
+.cRetour:hover{
+
+/*  background: rgba(136, 157, 21, 95);*/
+  transition:all ease-in 0.2s;
+}
+
+ /*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+ /*********************************************************************
+				Présentation de l'épicerie et l'épicier (nathalie)
+**********************************************************************/
+
+.header-epicier{  /* suppression des margin et padding du fond texture beige */
+	margin: 0;
+	padding: 0;
+}
+
+.header-epicier{ /*Texture beige en fond*/
+	background: url('../img/texture-epicier.jpg') no-repeat center;
+	background-size: cover;
+	margin: 0;
+	padding: 0 0 5px 0; 
+	text-align: center;
+	width: 100%;
+}
+
+.header-epicier img{ /*Photo de l'épicier*/
+
+	text-align: center;
+	border: 10px white solid;
+	height: 250px;
+	box-shadow: 4px 4px 6px #aaa;
+	-ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+}
+
+.header-epicier img:hover{ /*Effet rotation sur photo de l'épicier*/
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+.temoignage{
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+
+.temoignage h4 p{ /* Texte en manuscrit style témoignage*/
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	font-size: 28px;
+}
+
+.temoignage p{ /* Texte avec les horaires*/
+	font-size: 18px;
+	padding: : 0;
+
+}
+.temoignage p span{ /* Effet gras et vert sur adresse et horaires*/
+	font-size: 18px;
+	font-weight: bold;
+	color:#c0d554;
+}
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/********************************************
+	GRAND TITRE DES PAGES (sandrine)
+*********************************************/
+
+
+.page-header{
+	background-color : #c0d554;	
+	text-align: center;
+	color : white;
+	padding:20px;
+}
+small{
+	color : white !important;
+}
+
+h1,h2{
+	font-family: 'Aladin', cursive;
+}
+
+.categorie{
+	overflow: hidden;
+	padding-right:10px;
+/**/
+}
+
+.categorie a{
+	padding-right:10px;
+	color : #c0d554;
+}
+
+.categorie a:hover{
+	color :#889d12;
+}
+
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+
+/********************************************
+			CONTENU DE MA PAGE : Partie Recherche - Partie bloc promotions - partie bloc nouveautés (nathalie)
+*********************************************/
+
+.titrecategories{ /* Titre de la page */
+	padding-top:15px;
+	font-family: 'Aladin', cursive;
+	font-size: 33px;
+	color: #b6cb4d;
+}
+
+.search{
+	/*padding-bottom:20px;*/
+}
+
+.search p{/* Barre de recherche*/
+	padding-bottom:1px;
+	font-size: 17px;
+	font-weight: bold;
+	color:#c0d554;
+}
+
+.btn-default{ /* couleur du bouton */
+	background-color:#c0d554;
+	color: white;
+	font-weight: bold;
+}
+
+.box{ /* bloc promo ou nouveauté*/
+	text-align: center;
+	margin-left: 1%;
+	margin-right: 1%;
+	box-shadow: 1px 1px 6px #b8b8b8;
+}
+
+.box img{
+	height: 200px;
+}
+.box p{
+	text-align: center;
+	font-family: 'Aladin', cursive;
+	font-size: 25px;
+	color:white;
+}
+.box figcaption{
+	background-color:#c0d554;
+	font-family: 'Aladin', cursive;
+	font-size: 25px;
+	color:white;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+.promotions{
+	background-color: #ffa200;
+}
+
+.nouveautes{
+	width: 100%;
+	background-color: #f83232;
+}
+
+/********************************************
+	FICHE PRODUITS (Sandrine)
+*********************************************/
+
+/*.container-fluid{
+		margin : 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}*/
+
+.rowContainer{
+	position : relative !important;
+	padding : 0;
+}
+
+.contour{
+	margin-top:50px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:1px;
+}
+
+.infoProduit{
+	overflow: hidden;
+}
+
+.infoProduitRight{
+	overflow: hidden;
+	
+}
+.antiSpan{/*modif sc 0307*/
+	color:white;
+}
+.promo{/*modif sc 0407*/
+	overflow: hidden;
+	background-color: #ffa200;
+	color:white;
+	font-size:20px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+  	border-radius: 4px;
+  	padding-right: 2%;
+  	padding-top: 5px;
+  	padding-left: 30%;
+}
+
+.nouvo{/*modif sc 0407*/
+	overflow: hidden;
+	background-color: #f83232;
+	color:white;
+	font-size:20px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+  	border-radius: 4px;
+  	padding-right: 2%;
+  	margin-top: 5px;
+  	padding-left: 20%;
+}
+
+.prix{/*modif sc 0407*/
+	overflow: hidden;
+	text-align: right;
+	color:#889d12;
+	font-size:32px;
+	font-weight: bold;
+	padding: 6px 12px;
+}
+
+.libelle{
+	overflow: hidden;
+	font-weight: bold;
+}
+.textRight{/*modif sc 0307*/
+	text-align: right;
+	padding-right: 7%;
+}
+
+.textLeft{/*modif sc 0307*/
+	padding-left: 7%;
+}
+
+/*Bouton Ajouter*//*modif sc 0407*/
+.ajout{
+	color : #889d12;
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+}
+
+.infoProduit{
+	padding:0;
+}
+
+.vignette{
+	width : 120px;
+	height : 120px;
+	overflow: hidden;
+}
+
+.btn-success{
+	border-color : #889d12;
+}
+
+/*BOUTON INCREMENTATION*/
+
+.input-group{
+	overflow: hidden;
+	z-index: 0;/*modif SC 04/07/17*/
+}
+
+
+#moins{
+	background-color: #889d12;
+	z-index: 0;/*modif SC 04/07/17*/
+	border:none;
+	padding-bottom: 3px;
+}
+
+#plus{
+	background-color: #f83232;
+	z-index: 0;/*modif SC 04/07/17*/
+	border:none;
+	padding-bottom: 3px;
+}
+
+
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+
+/********************************************
+	CHEVRON QUI PERMET DE REVENIR EN HAUT (Sandrine)
+*********************************************/
+
+.round{
+	background-color:#889d12;
+	border-radius: 50%;
+	padding:5%;
+}
+
+.round:hover{
+	color : #889d12;
+}
+
+.chevron_up{
+	text-align: center;
+	vertical-align: middle;
+	position:fixed;
+	bottom:50px;
+	right:0;
+	padding-right:3px;
+}
+
+.fa-angle-double-up{
+	font-size: 24px;
+	color: white;
+    width: 40px;
+    height: 40px;
+    padding: 15%;
+    border-radius: 100%;
+}
+
+.fa-angle-double-up:hover{
+	background-color:white;
+}
+
+
+/********************************************
+			FOOTER (Sandrine)
+*********************************************/
+
+
+.footerFront{
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	bottom: 0;
+	background-color : #889d12;
+	padding:10px;
+	text-align: center;
+}
+
+.footerFront p{
+	color:white;
+	font-size: 1em;
+}
+
+.footerFront a{
+	color:white;
+}
+
+.footerFront a:hover{
+	color:white;
+	text-decoration: underline;
+	font-size: 1,2em;
+}
+
+.footerFront .fa{
+	color:white;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/********************************************
+		PARTIE PANIER (sandrine)
+*********************************************/
+
+.panier table{
+	width:100%;
+	border-style: solid;
+	border-radius-right: 4px;
+	border-radius-left: 4px;
+	border-width: 1px;
+	border-color : #889d12;
+	padding:20px;
+
+}
+
+.panier th{
+	padding:20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	background-color: #889d12;
+	color:white;
+	font-size: 1em;
+	text-align:center;
+}
+
+.panier td{
+	padding:20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color : #889d12;
+	font-size: 1.5em;
+	color:#7f8c8d;	
+}
+
+.recap{
+	margin-top:2%;
+	margin-bottom:2%;
+	padding:10px;
+	border-style: solid;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color : #7f8c8d;	
+	background-color: #7f8c8d;	
+	color:white;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.imgRecap{
+	margin:auto;
+	width: 50px;
+	height: 50px;
+}
+
+.fa-trash{
+	margin:auto;
+	color:#889d12;
+	padding:10%;
+	font-size: 1em;
+}
+
+.title{
+	color: #c0d554;	
+}
+
+.lien{
+	padding: 10px 20px;
+	margin-top:2%;
+	margin-bottom:2%;
+	color: #c0d554;	
+	text-align: right;
+}
+.lien a{
+	padding: 10px 20px;
+	margin-top:2%;
+	margin-bottom:2%;
+	color: #c0d554;
+	font-size: 17px;
+}
+.lien a:hover{
+	color: #889d12;	
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#validPanier{ /*Couleur bouton de validation*/
+	font-size: 1.8em;
+	float: right;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color: #ffa200 !important;	
+	margin-top:2%;
+	margin-bottom:50px;
+}
+
+#validPanier:hover{ /*Survol du bouton de validation*/
+	font-weight: bold;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color:white!important;	
+	color:#ffa200;
+ }
+
+ #validPanier:focus{
+	font-weight: bold;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color:white!important;	
+	color:#ffa200;
+ }
+
+  #validPanier:active:focus{
+	font-weight: bold;
+	border-width: 1px;
+	border-color : #ffa200;	
+	background-color:white!important;	
+	color:#ffa200;
+ }
+
+.fa-truck,.fa-car,.fa-credit-card,.fa-cc-paypal{
+	font-size: 2em;
+	color: #889d12;;
+	padding: 2%;
+}
+.lastLine{
+	padding-bottom:2%;
+}
+
+.textRight{
+	text-align:right;
+}
+
+.textCenter{
+	text-align:center;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/********************************************
+		PARTIE CONTACT à l'EPICIER (sandrine)
+*********************************************/
+
+.champContact {
+	border-radius: 4px;
+	border-style: solid;
+	border-color: #889d12;
+	margin-bottom:25px;
+	padding: 10px;
+	font-size: 20px;
+	height: 40px;
+}
+.champTextarea{
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #889d12;
+	padding-bottom:20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 20px;
+	height: 170px;
+}
+
+.champSelect{
+	width : 100%;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #889d12;
+/*	margin-bottom:20px;
+	padding-top: 10px;*/
+	font-size: 20px;
+	height: 40px;
+}
+
+.endForm{
+	color:#889d12;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#repPanier{
+	background-color: #889d12;
+	color:white;
+	font-size: 22px;
+	text-align: center;
+}
+
+.paragraphe{
+	font-size: 16px;
+}
+
+.imgEpicier{
+	border: 10px white solid;
+	height: 250px;
+	box-shadow: 4px 4px 6px #aaa;
+}
+
+address{
+	font-size: 16px;
+}
+
+.imgEpicierie{ /* image modal*/
+	height:150px;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/********************************************
+				CONNEXION / INSCRIPTION (nathalie)
+*********************************************/
+
+.connexion div{ /* Marges autour du formulaire de connexion*/
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.inscription div{ /* Marges autour du formulaire d'inscription*/
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.obligations{
+	color:#f83232;
+}
+
+ span{ /* couleur des * des champs obligatoires */
+ 	color:#f83232;
+ 	font-size: 20px;
+ }
+
+ a{ /* couleur et grosseur des liens*/
+ 	color:#c0d554;
+ 	font-size: 17px;
+ }
+
+ a:hover{ /* couleur et grosseur des liens au survol */
+ 	color:#a7ba42;
+ 	font-size: 17px;
+ }
+
+ .form-control{ /* couleur de l'input */
+ 	border:1px dashed #c0d554;
+ }
+
+.form-control:focus{ /* effet si on clique sur l'input */
+	border-color: #c0d554;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 243, 123, .6);
+}
+
+.form-control-ok{
+	border:5px dashed #c0d554;
+}
+
+ .form-control-warning{ /* Effet sur l'input si case non remplie */
+ 	border:1px dashed #f83232 !important;
+ 	border-radius: 4px;
+ 	width: 100%;
+ 	padding: 6px 12px;
+
+ }
+
+.divAjout{  /*Div qui s'ajoute si la case n'est pas remplie. Ex:"merci de remplir..." */
+ 	height: 20px;
+	color:#f83232;
+ } 
+
+ #identifiantZero{  /*Effet si la case identifiant n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mdpZero{  /*Effet si la case mdp n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+ 
+#nomZero{  /*Effet si la case nom n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#prenomZero{  /*Effet si la case prenom n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mailZero{  /*Effet si la case mail 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mail2Zero{  /*Effet si la case mail 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#passwordZero{ /*Effet si la case password 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#password2Zero{  /*Effet si la case password 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#adresseZero{ /*Effet si la case adresse n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#cpZero{ /*Effet si la case code postal n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#villeZero{ /*Effet si la case ville n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#mobileZero{ /*Effet si la case mobile n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+
+}
+
+#formOk{ /*Div qui s'affiche à la validation du formulaire*/
+	color:#c0d554;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.btn-primary{ /*Couleur bouton de validation*/
+	font-weight: bold;
+ 	background-color:#c0d554; 
+ 	border: none;
+ 	padding-bottom: 10px;
+ 	padding-right: 5%;
+ }
+
+.btn-primary:hover{ /*Survol du bouton de validation*/
+	font-weight: bold;
+ 	background-color:#a7ba42; 
+ 	border: none;
+ 	padding-bottom: 10px;
+ 	padding-right: 5%;
+ }
+
+.btn-primary:focus{ /*clic du bouton de validation*/
+	font-weight: bold;
+ 	background-color:#a7ba42; 
+ 	border: none;
+ 	padding-bottom: 10px;
+ 	padding-right: 5%;
+ }
+
+ .btn:active:focus{ /*clic du bouton de validation au moment du clic*/
+	font-weight: bold;
+ 	background-color:#a7ba42; 
+ 	border: none;
+ 	padding-bottom: 10px;
+ 	padding-right: 5%;
+ }
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/********************************************
+		Nouveau mdp / Envoi Mail
+*********************************************/
+
+.nvMDP div{ /* Marges autour du formulaire d'entrée de nouveau mdp*/
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+ #nvMdpZero1{  /*Effet si la case mot de passe 1 pour l'oubli du mdp n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+ #nvMdpZero2{  /*Effet si la case mot de passe 2 pour l'oubli du mdp n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+
+#formOk2{ /*Div qui s'affiche à la validation du formulaire*/
+	color:#c0d554;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
+
+/***************************************************************
+					MES INFORMATIONS PERSONNELLES
+**************************************************************/
+
+ .jumbotron{
+ 	background: url('../img/texture-epicier.jpg') no-repeat center;
+	background-size: cover;
+ 	padding: 5px 2%;
+ 	padding: 5px;
+ 	background-color: white;
+ 	border: solid 1px;
+ 	border-color: #b6cb4d;
+ }
+ 
+  .jumbotron p{
+ 	color:#787878;
+	font-size: 17px;
+ }
+
+.faContact{ /* couleur des icones */
+	color:#b6cb4d;
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+
+.titrecategories{ /* Titre de la page */
+	padding-top:15px;
+	font-family: 'Aladin', cursive;
+	font-size: 33px;
+	color: #b6cb4d;
+	/*text-align: center;*/
+}
+
+/***************************************************************
+	MODIFICATIONS DU INFORMATIONS PERSONNELLES -  ESPACE PERSO
+**************************************************************/
+
+
+ #affichediv1{
+ 	margin: 5px 2%;
+ }
+
+
+ #passwordOldZero{  /*Effet si la case ancien mot de passe n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#passwordNewZero1{  /*Effet si la case nouveau mot de passe 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+ 
+#passwordNewZero2{  /*Effet si la case nouveau mot de passe 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+
+}
+
+
+#formOk11{ /*Div qui s'affiche à la validation du formulaire*/
+	color:#c0d554;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.fondGris{
+	background-color: #f6f6f6;
+}
+
+
+
+/***************************************************************
+			MODIFICATIONS DU MOT DE PASSE - ESPACE PERSO
+**************************************************************/
+
+
+ #affichediv2{
+ 	margin: 5px 2%;
+ }
+
+
+ #passwordOldZero{  /*Effet si la case ancien mot de passe n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+
+#passwordNewZero1{  /*Effet si la case nouveau mot de passe 1 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+}
+ 
+#passwordNewZero2{  /*Effet si la case nouveau mot de passe 2 n'est pas remplie*/
+	padding: 0;
+	color:#f83232;
+
+}
+
+
+#formOk12{ /*Div qui s'affiche à la validation du formulaire*/
+	color:#c0d554;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+
+/***************************************************************
+		AFFICHAGE ANCIENNE COMMANDE -  ESPACE PERSO
+**************************************************************/
+
+
+#accordion{
+ 	margin: 5px 2%;
+ }
+
+ .ui-state-default{ /* Changement de la police inactive dans l'accordéon */
+ 	border: 1px solid #a7b94c;
+ 	background-color: #fff;
+ 	font-weight: bold;
+ 	color:#c0d554;
+ }
+
+ .ui-state-active{ /* changement de l'accordéonen vert*/
+ 	border: 1px solid #a7b94c;
+ 	background-color: #c0d554;
+ 	font-weight: bold;
+ 	color:#fff;
+ }
+
+
+
+/***************************************************************
+		AFFICHAGE DES MESSAGES DERREUR - Christophe
+**************************************************************/
+
+
+/*.alert{text-align: center; font-size: 20px;}*/
+.alert-success {
+    color: #ffffff !important;
+    background-color: #889d12;
+    border-color: #ebccd1;
+  	font-size: 20px;
+    text-align: center;
+}
+
+.alert-failed {
+    color: #ffffff !important;
+    background-color: #ff9900;
+    border-color: #ebccd1;
+  	font-size: 20px;
+    text-align: center;
+}
+
+.passok{
+    color: green !important;
+   
+    border-color: #ebccd1;
+  	font-size: 20px;
+    text-align: center;	
+}
+
+.cRetour {
+/*  border-radius: 260px;*/
+  padding:15px;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  
+
+/*  background:rgba(136, 157, 18, 0.7);*/
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  position: fixed;
+  cursor: pointer;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+}
+/*.cRetour:before{ content: " \25b2";  color: white;}*/
+.cRetour:hover{
+
+/*  background: rgba(136, 157, 21, 95);*/
+  transition:all ease-in 0.2s;
+}
+
+
+
+/***************************************************************
+		CONDITIONS GENERALES DE VENTE - CGV
+**************************************************************/
+
+.cgv{
+	padding-left:2%;
+	padding-left:2%;
+}
+
+.titreCGV{ /* Titre des conditions générales de vente */
+	padding-top:15px;
+	font-family: 'Aladin', cursive;
+	font-size: 30px;
+	color: #c0d554;
+}
+
+.soustitreCGV{
+	padding-top:15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	color: #c0d554;
+	font-weight: bold;
+}
+
+.soussoustitreCGV{
+	padding-top:15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	color: #c0d554;
+}
+
+/***************************************************************
+				MENTIONS LEGALES  - ML
+**************************************************************/
+
+.ml{
+	padding-left:2%;
+	padding-left:2%;
+}
+
+.titreML{ /* Titre des conditions générales de vente */
+	padding-top:15px;
+	font-family: 'Aladin', cursive;
+	font-size: 30px;
+	color: #c0d554;
+}
+
+.soustitreML{
+	padding-top:15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	color: #c0d554;
+	font-weight: bold;
+}
+
+
+/***************************************************************
+				PAGE 404 - Page introuvable
+**************************************************************/
+
+.page404{
+	padding-top:50px;
+	font-family: 'Aladin', cursive;
+	font-size: 30px;
+	color: #c0d554;
+	text-align: center;
+}
+
+.page404 a{
+	text-align: center;
+}

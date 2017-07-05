@@ -1,0 +1,8 @@
+Liste des pages dans Views/Default/page.php
+
+- accueil
+- connexion
+- inscription
+- mot-de-passe-perdu // generation du token
+- categorie
+- ma-commande
