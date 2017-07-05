@@ -2,6 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
+<?php if(isset($message)) echo $message; ?>	
 
 <!--********************************************
 	INSCRIPTION
@@ -109,11 +110,6 @@
 		</div>
 	</div><!--col-xs-12 de mon formulaire de contact-->
 </section><!--fin row inscription-->
-
-
-
-
-<?= $message ?>
 
 <a href="accueil">Retour page d'accueil</a>
 

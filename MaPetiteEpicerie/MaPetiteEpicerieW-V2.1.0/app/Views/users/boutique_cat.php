@@ -57,38 +57,39 @@ $datevalid = $valeur["datevalid"];
 	    </div>
 
 
-	<div class="col-xs-12">
-		<p class="ajout">Ajouter au panier</p>
-	<!-- </div>
-	<div class="col-xs-6"> -->
+		<div class="col-xs-12">
+			<p class="ajout">Ajouter au panier</p>
+		<!-- </div>
+		<div class="col-xs-6"> -->
 
-	<!-- ****************************************************bouton increment produit********************************************* -->
+		<!-- ****************************************************bouton increment produit********************************************* -->
 
-        <div class="input-group infoProduit" style="width:100%">
-            <span class="input-group-btn" >
-                <button type="button" id="moins" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field=""  >
-                    <span class="glyphicon glyphicon-minus antiSpan"></span>
-                </button>
-            </span>
-            <span>
-           		 <input type="text" id="quantity" name="quantity" class="form-control input-number" value="0" min="1" max="100" style="text-align: center;">
-            </span>
-            <span class="input-group-btn">
-                <button type="button" id="plus"  class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="" style="text-align: left">
-                <span class="glyphicon glyphicon-plus antiSpan"></span>
-                </button>
-            </span>
-        </div>
-        <!-- fin bouton -->
-</div>	
+	         <div class="input-group infoProduit">
+	            <span class="input-group-btn" >
+	                <button type="button" id="moins" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field=""  >
+	                    <span class="glyphicon glyphicon-minus antiSpan"></span>
+	                </button>
+	            </span>
+	            <span>
+	           		 <input type="text" id="quantity" name="quantity" class="form-control input-number" value="0" min="1" max="100" style="text-align: center;">
+	            </span>
+	            <span class="input-group-btn">
+	                <button type="button" id="plus"  class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="" style="text-align: left">
+	                <span class="glyphicon glyphicon-plus antiSpan"></span>
+	                </button>
+	            </span>
+	        </div>
+	         
+		</div>	 
 	  
 	
 <!-- fin du contour produit -->
-	</div>
+</div>
 
 
-	<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0 contour">												
-		<div class="col-xs-6 infoProduit" name="id-prod">
+<div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0 contour">
+	<!--  pour memoire suppression class infoProduit-->
+		<div class="col-xs-6" name="id-prod"> 
 			<img class="vignette" src="<?= $this->assetUrl($photo) ?>">
 
 			<h4 class="libelle textLeft" ><?php  echo $descriptif; ?></h4>
@@ -119,30 +120,30 @@ $datevalid = $valeur["datevalid"];
 	    </div>
 
 
-	<div class="col-xs-12">
-		<p class="ajout">Ajouter au panier</p>
-	<!-- </div>
-	<div class="col-xs-6"> -->
+		<div class="col-xs-12">
+			<p class="ajout">Ajouter au panier</p>
+		<!-- </div>
+		<div class="col-xs-6"> -->
 
-	<!-- ****************************************************bouton increment produit********************************************* -->
+		<!-- ****************************************************bouton increment produit********************************************* -->
 
-        <div class="input-group infoProduit" style="width:100%">
-            <span class="input-group-btn" >
-                <button type="button" id="moins" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field=""  >
-                    <span class="glyphicon glyphicon-minus antiSpan"></span>
-                </button>
-            </span>
-            <span>
-           		 <input type="text" id="quantity" name="quantity" class="form-control input-number" value="0" min="1" max="100" style="text-align: center;">
-            </span>
-            <span class="input-group-btn">
-                <button type="button" id="plus"  class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="" style="text-align: left">
-                <span class="glyphicon glyphicon-plus antiSpan"></span>
-                </button>
-            </span>
-        </div>
-        <!-- fin bouton -->
-</div>	
+	        <div class="input-group infoProduit">
+	            <div class="input-group-btn" >
+	                <button type="button" id="moins" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field=""  >
+	                    <span class="glyphicon glyphicon-minus antiSpan"></span>
+	                </button>
+	            </div>
+	            <div>
+	           		 <input type="text" id="quantity" name="quantity" class="form-control input-number" value="0" min="1" max="100" style="text-align: center;">
+	            </div>
+	            <div class="input-group-btn">
+	                <button type="button" id="plus"  class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="" style="text-align: left">
+	                <span class="glyphicon glyphicon-plus antiSpan"></span>
+	                </button>
+	            </div>
+	        </div>
+	        <!-- fin bouton -->
+		</div>	
 	  
 	
 <!-- fin du contour produit -->

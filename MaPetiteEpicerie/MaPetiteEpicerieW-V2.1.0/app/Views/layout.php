@@ -41,6 +41,18 @@
 <!-- Lien Javascript faire disparaitre message dans page -->
 <script type="text/javascript" src="<?= $this->assetUrl('js/message.js') ?>"></script>
 
+
+<!-- *********** Sandrine JS ************** -->
+
+<!-- Lien Javascript pour la page contact -->
+<script type="text/javascript" src="<?= $this->assetUrl('js/contact.js') ?>"></script>
+
+<!-- Lien Javascript pour le panier -->
+<script type="text/javascript" src="<?= $this->assetUrl('js/panier.js') ?>"></script>
+
+<!-- Lien Javascript pour les boutons d'incrémentation -->
+<script type="text/javascript" src="<?= $this->assetUrl('js/increment.js') ?>"></script>
+
 <!-- Lien Javascript pour generer google maps géolocalisation -->
 <script type="text/javascript" src="<?= $this->assetUrl('js/gmaps.js') ?>"></script>
 
@@ -109,27 +121,27 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
 
 	      <ul class="nav navbar-nav navbar-fixed-top">
-		        <li><a href="accueil">Accueil <span class="sr-only">(Accueil)</span></a></li>
+		        <li><a href="/MaPetiteEpicerieW-V2.1.0/public/accueil">Accueil <span class="sr-only">(Accueil)</span></a></li>
 		        <li class="dropdown">
 		           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catégories <span class="caret"></span></a>
 		            <ul class="dropdown-menu">
 		              <li><a href="#"></a></li>
-		              <li><a href="#">Plat du jour</a></li>
-		              <li><a href="#">Boissons</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Plat du jour">Plat du jour</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Boissons">Boissons</a></li>
 		              <li role="separator" class="divider"></li>
-		              <li><a href="#">Fruits et légumes</a></li>
-		              <li><a href="#">Surgelés</a></li>
-		              <li><a href="#">Epicerie Salée</a></li>
-		              <li><a href="#">Epicerie Sucrée</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Fruits et légumes">Fruits et légumes</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Produits frais">Produit frais</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Epicerie salée">Epicerie Salée</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Epicerie sucrée">Epicerie Sucrée</a></li>
 		              <li role="separator" class="divider"></li>
-		              <li><a href="#">Hygiène / Bébé</a></li>
-		              <li><a href="#">Entretien / Nettoyage</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/Hygiène">Hygiène / Bébé</a></li>
+		              <li><a href="/MaPetiteEpicerieW-V2.1.0/public/boutique_cat/">Entretien / Nettoyage</a></li>
 		              <li role="separator" class="divider"></li>
 		              <li><a href="#">Mon panier</a></li>
 		            </ul>
 		          </li>
 		        <li><a href="#">Nos services <span class="sr-only">(current)</span></a></li>
-		        <li><a href="#">Nous contacter</a></li>        
+		        <li><a href="contact">Nous contacter</a></li>        
 	      </ul>
 	      
 			<!--       <ul class="nav navbar-nav ">
@@ -160,14 +172,29 @@
 
 
 <body>
+
 <div class="cRetour">
 	<i class="fa fa-angle-double-up round" aria-hidden="true"></i>
 </div>
 
 	<div class="container-fluid">
-			<header>
-				<h1 class="titrecategories"> <?= $this->e($title) ?></h1>
-			</header>
+
+		<header>
+			<section class="row">
+				<div class="col-xs-12 page-header">
+					<h1> <?= $this->e($title) ?></h1>
+				</div>	
+			</section>
+		</header>
+
+<!-- 
+<section class="row">
+	<div class="col-xs-12 page-header">
+		<h1>Nous contacter : </h1>
+	</div>
+</section> -->
+
+
 
 			<section>
 				<?= $this->section('main_content') ?>
@@ -180,11 +207,11 @@
 
 				</li>
 			</ul>  -->		
-
+</div>			
 		<footer class="footerFront">
-			<p><a href="#">Plan du site</a> - <a href="#">Mentions légales</a> - <a href="#">Conditions générales de ventes</a> - <a href="accueil_admin">Accès Administrateur</a></p>
+			<p><a href="#">Plan du site</a> - <a href="mentions-legales">Mentions légales</a> - <a href="conditions-generales-de-vente">Conditions générales de ventes</a> - <a href="accueil_admin">Accès Administrateur</a></p>
 			<!-- A habiller -->
 		</footer>
-	</div>
+	
 </body>
 </html>

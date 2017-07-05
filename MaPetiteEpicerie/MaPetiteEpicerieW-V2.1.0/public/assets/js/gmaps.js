@@ -53,7 +53,7 @@ function geocodeAddress(geocoder, resultsMap) {
     }
     // Marqueur pour l'épicerie de Diges
     // https://developers.google.com/maps/documentation/javascript/examples/icon-simple?hl=fr
-    var image = src="/MaPetiteEpicerieW-V2.1/public/assets/img/marker.png";
+    var image = src="/MaPetiteEpicerieW-V2.1.0/public/assets/img/marker.png";
     var epicerie1 = new google.maps.Marker({
         position: {lat: 47.7169121, lng: 3.2951878},
         map: map,

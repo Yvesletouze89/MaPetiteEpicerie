@@ -129,21 +129,21 @@ Changement de mon mot de passe
 <!-- ***************INPUT POUR LE NOUVEAU MOT DE PASSE *************** -->
 							<div class="form-group col-xs-12">
 				    			<p><span class="fa fa-key faContact" aria-hidden="true"></span>Entrez votre nouveau mot de passe<span> * </span></p>
-								<input type="password" class="form-control" id="passwordNew1" name="password" placeholder="Nouveau mot de passe"/>
+								<input type="password" class="form-control" id="password1" name="password" placeholder="Nouveau mot de passe"/>
 								<div class="divAjout" id="passwordNewZero1"></div>
 							</div>
 <!-- ***************INPUT POUR LE NOUVEAU MOT DE PASSE VERIF *************** -->
 							<div class="form-group col-xs-12">
 				    			<p><span class="fa fa-key faContact" aria-hidden="true"></span>Entrez une seconde fois votre nouveau mot de passe<span> * </span></p>
-								<input type="password" class="form-control" id="passwordNew2" name="password2" placeholder="Vérification du nouveau mot de passe"/>
+								<input type="password" class="form-control" id="password2" name="password2" placeholder="Vérification du nouveau mot de passe"/>
 								<div class="divAjout" id="passwordNewZero2"></div>
 							</div>
 <!-- ***************BOUTON DE DEMANDE DE NOUVEAU MOT DE PASSE*************** -->
     						<div class="form-group col-xs-12">
-    							<p><button type="submit" id="submit12" name="submit" class="btn btn-primary pull-right">Je valide mon nouveau mot de passe</button></p>
+    							<p><button type="submit" id="submit4" name="submit" class="btn btn-primary pull-right">Je valide mon nouveau mot de passe</button></p>
     						</div>
     					</form>
-    					<div id="formOk12"></div>
+    					<div id="formOk2"></div>
 					</div>
 				</div>
 			</section>

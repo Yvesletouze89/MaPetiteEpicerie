@@ -37,7 +37,7 @@ $(function(){// un seul $function par fichier js
     $("#identifiant").on('focusin', stopWarningIdentifiant); // Enlève le "merci de remplir" quand on reclic dans le champs
     $("#motDePasse").on('focusout', verifMotDePasse);
     $("#motDePasse").on('focusin', stopWarningMotDePasse);
-    $("#submit1").hide(); // bouton  de connexion caché à l'affichage du formulaire, s'affiche si tout rempli
+    //$("#submit1").hide();  bouton  de connexion caché à l'affichage du formulaire, s'affiche si tout rempli
 
 // RECUPERATION DONNEES INSCRIPTION ET LIEN FONCTION
     $("#monsieur").on('change', verifCivilite); // bouton radio civilite monsieur madame
@@ -67,58 +67,7 @@ $(function(){// un seul $function par fichier js
 
 
 
-// PARTIE AJAX D'ENVOI DU FORMULAIRE DE CONNEXION A LA BASE DE DONNEES
-    $("#formSubmit1").on("submit1", function(envoiFormulaireConnexion){
-        envoiFormulaireConnexion.preventDefault();
-                   $.ajax({
-                        url : 'fichier-verifdonnees-de-christophe.php',
-                        type : 'POST',
-                        data : 'email=' + identifiantSaisi + '&password=' + motdepasseSaisi + '&rester_connecte=' + $("#resterConnecte").is(':checked')
-                        // déclarer même les champs qui ne sont pas obligatoires
-                    })
-                    .done(function(){
-                        $("#formOk1").html("Vous êtes bien connecté");
-                    })
-                    .fail(function(){
-                        console.log("Petit problème !");
-                    });
-    });
-
-// PARTIE AJAX D'ENVOI DU FORMULAIRE D'INSCRIPTION A LA BASE DE DONNEES
-    $("#formSubmit2").on("submit2", function(envoiFormulaireInscription){
-        envoiFormulaireInscription.preventDefault();
-        if(mailSaisi == mail2Saisi){
-            if(passwordSaisi == password2Saisi){
-                    $.ajax({
-                        url : 'fichier-dinscription-de-christophe.php',
-                        type : 'POST',
-                       // data : 'nom=' + $("#nom").val() + '&prenom=' + $("#prenom").val() + '&email=' + $("#email").val() + '&password=' + $("#password").val()
-                     //    + '&adresse1=' + $("#adresse").val() + '&adresse2=' + $("#adresse2").val()
-                       //   + '&CP=' + $("#CP").val() + '&ville=' + $("#ville").val()
-                       //  + '&tel=' + $("#tel").val() + '&mobile=' + $("#mobile").val() + '&cgv=' + ("#cgv").is(':checked') + ("#smsMail").is(':checked')
-                        // déclarer même les champs qui ne sont pas obligatoires
-                        data : 'nom=' + nomSaisi + '&prenom=' + prenomSaisi + '&email=' + mailSaisi + '&password=' + passwordSaisi + '&adresse1=' + adresseSaisie + '&adresse2=' + $("#adresse2").val() + '&CP=' + cpSaisi + '&ville=' + villeSaisie
-                         + '&tel=' + $("#tel").val() + '&mobile=' + mobileSaisi
-                        // déclarer même les champs qui ne sont pas obligatoires
-                    })
-                    .done(function(){
-                        $("#formOk2").html("Vous êtes bien inscrit");
-                    })
-                    .fail(function(){
-                        console.log("Petit problème !");
-                    });
-            }else{
-                $("#formOk2").html("Merci d'indiquer deux mots de passe identiques.");
-            }
-        } else{
-            $("#formOk2").html("Merci d'indiquer deux mails identiques.");
-        }
-
-    });
 }); // Fin de mon $function 
-
-
-
 
 
 
@@ -128,8 +77,6 @@ $(function(){// un seul $function par fichier js
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-var validIdentifiant, validMotDePasse=0; // Initialisation des var à 0
 
 
 // **********************
@@ -142,11 +89,7 @@ function verifIdentifiant(){
         if (identifiantSaisi == "" ){
             $("#identifiant").addClass("form-control-warning");
             $("#identifiantZero").html("Merci d'indiquer votre identifiant (il s'agit ici de votre adresse mail).");
-            validIdentifiant=0;
-        }else{
-            validIdentifiant=1;
         }
-        validButtonConnexion(); // si la civilite est rentrée "var=1" donc déclenche la fonction validButton qui affiche le bouton d'inscription
 }
 
 function stopWarningIdentifiant(){
@@ -164,35 +107,13 @@ function verifMotDePasse(){
         if (motdepasseSaisi == "" ){
             $("#motDePasse").addClass("form-control-warning");
             $("#mdpZero").html("Merci de rentrer votre mot de passe.");
-            validMotDePasse=0;
-        } else{
-            validMotDePasse=1;
         }
-        validButtonConnexion(); // si la civilite est rentrée "var=1" donc déclenche la fonction validButton qui affiche le bouton d'inscription
 }
 
 function stopWarningMotDePasse(){
            $("#motDePasse").removeClass("form-control-warning");
            $("#mdpZero").html("");
         }
-
-
-//**************************************************************************************************
-// **************************************************************************************************
-//                         VISUALISATION DU BOUTON DE CONNEXION SI TOUT REMPLI
-//***************************************************************************************************
-
-
-function validButtonConnexion(){
-    if (validIdentifiant ==1 && validMotDePasse==1){
-        $("#submit1").show();
-    }else{
-        $("#submit1").hide();        
-    }
-}
-
-
-
 
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

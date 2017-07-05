@@ -10,11 +10,6 @@
 	 -->
 
 
-<section class="row">
-<div class="col-xs-12 page-header">
-	<h1>Ma petite Epicerie : <small>votre drive épicier</small></h1>
-</div>
-</section>
 
 <section class="row">
 

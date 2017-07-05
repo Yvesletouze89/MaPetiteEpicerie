@@ -11,6 +11,13 @@ $w_routes = array(
 ['GET', '/mention', 'Default#mention', 'default_mention'],
 ['GET', '/produits', 'Default#produits', 'default_produits'],
 
+// route pour les conditions générales de vente
+['GET', '/conditions-generales-de-vente', 'Default#cgv', 'default_conditions-generales-de-vente'],
+
+// route pour les mentions légales
+['GET', '/mentions-legales', 'Default#mentionLegal', 'default_mentions-legales'],
+
+
 ['GET|POST', '/ajout', 'Default#ajout', 'default_ajout'],
 
 ['GET', '/produit_suppr/[:id]', 'Default#produit_suppr', 'default_produit_suppr'],
@@ -74,7 +81,7 @@ $w_routes = array(
 			
 		//Routes utilisateurs
 		['GET|POST', '/essai', 'Admin#essai', 'x'],
-		['GET|POST', '/boutique_categories', 'Users#boutique_categories', 'boutique_categories'],
+		//['GET|POST', '/boutique_categories', 'Users#boutique_categories', 'boutique_categories'],
 		['GET|POST', '/boutique_cat/[:cat]', 'Users#boutique_cat', 'boutique_cat'],
 		
 		//Routes admin

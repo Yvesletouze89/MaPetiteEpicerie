@@ -2,6 +2,8 @@
 
 <?php $this->start('main_content') ?>
 
+<?php if(isset($message)) echo $message; ?>	
+
 <!--ici le formulaire de connexion du site -->
 
 <section  id="connexion" class="row connexion">
@@ -41,9 +43,6 @@
 		</div>
 	</div><!--col-xs-12 de mon formulaire de contact-->
 </section><!--fin row inscription-->
-
-<?= $message ?>
-
 
 <a href="accueil">Retour page d'accueil</a>
 

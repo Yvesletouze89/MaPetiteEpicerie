@@ -30,7 +30,7 @@
 		</label>
 	</div> -->
 
-	<input type="submit" value="Envoyer">
+	<input class="btn btn-primary pull-right" type="submit" value="accèder">
 </form>	
 
 

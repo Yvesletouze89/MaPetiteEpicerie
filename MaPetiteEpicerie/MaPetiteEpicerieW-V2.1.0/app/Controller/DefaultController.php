@@ -21,6 +21,24 @@ class DefaultController extends Controller
 	}
 
 
+	/***
+	  Page conditions générales de vente
+	 ****/
+	public function cgv()
+	{
+		$this->show('default/conditions-generales-de-vente');
+	}
+
+
+	/***
+	  Page Mentions légales
+	 ****/
+	public function mentionLegal()
+	{
+		$this->show('default/mentions-legales');
+	}
+
+
 	/**
 	 * Page d'accueil par défaut
 	 */

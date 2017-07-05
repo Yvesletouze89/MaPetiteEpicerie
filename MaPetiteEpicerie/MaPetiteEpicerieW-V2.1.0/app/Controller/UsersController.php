@@ -81,12 +81,12 @@ class UsersController extends Controller
 					
 				
 				$user->addUser($array);
-				$this->show('users/inscription', ["message" => "<p class='alert alert-warning'>Vous avez bien ete inscrit !</p>"]);
+				$this->show('users/inscription', ["message" => "<p class='alert-success clearMsg'>Vous avez bien ete inscrit !</p>"]);
 			}	
 		}
 		else
 		{
-			$this->show('users/inscription', ["message" => "<p class='alert alert-warning'>Remplir les champs obligatoire !</p>"]);
+			$this->show('users/inscription', ["message" => "<p class='alert-warning clearMsg'>Remplir les champs obligatoire !</p>"]);
 		}
 
 	}
